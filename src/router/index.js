@@ -13,7 +13,16 @@ const routes = [
   {
     path: '/destination',
     name: 'Destination',
-    component: () => import(/* webpackChunkName: "destination" */ '../views/Destination.vue')
+    component: () => import(/* webpackChunkName: "destination" */ '../views/Destination.vue'),
+    props: true,
+    children: [
+      {
+        path: ":id",
+        name: "destinationName",
+        props: true,
+        component: () => import(/* webpackChunkName: "destination" */ '../views/DestinationName.vue'),
+      }
+    ]
   },
   {
     path: '/crew',
@@ -28,6 +37,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: "history",
   routes
 })
 
