@@ -3,7 +3,7 @@
     <h1 class="text-white text-2xl pl-20"><span class="text-gray-600">01</span> PICK YOUR DESTINATION</h1>
         <div class="flex items-center justify-end text-white mr-48">
           <router-link 
-          :to="{name: 'destinationName', params: {id: parseInt(destination.id)}}" 
+          :to="{name: 'destinationName', params: {id: destination.id}}" 
           v-for="destination in destinations" 
           :key="destination.id"
           class="mr-4 uppercase cursor-pointer py-3"
