@@ -8,7 +8,7 @@
         </div>
         <div class="w-2/3 flex justify-center link_list">
           <router-link to="/" class="text-xl py-6">00 HOME</router-link>
-          <router-link to="/destination" class="text-xl py-6">01 DESTINATION</router-link>
+          <router-link to="/destination/1" class="text-xl py-6">01 DESTINATION</router-link>
           <router-link to="/crew" class="text-xl py-6">02 CREW</router-link>
           <router-link to="/technology" class="text-xl py-6">03 TECHNOLOGY</router-link>
         </div>
