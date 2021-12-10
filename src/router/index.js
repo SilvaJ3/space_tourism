@@ -34,6 +34,11 @@ const routes = [
     name: 'Technology',
     component: () => import(/* webpackChunkName: "technology" */ '../views/Technology.vue')
   },
+  {
+    path: "*",
+    name: "notFound",
+    component: () => import(/* webpackChunkName: "404" */ '../views/NotFound.vue')
+  }
 ]
 
 const router = new VueRouter({

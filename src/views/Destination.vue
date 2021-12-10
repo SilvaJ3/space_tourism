@@ -11,7 +11,9 @@
             <h3>{{destination.name}}</h3>
           </router-link>
         </div>
-        <router-view :key="$route.path"/>
+        <transition name="slide" mode="out-in">
+          <router-view :key="$route.path"/>
+        </transition>
   </div>
 </template>
 
@@ -36,4 +38,14 @@ export default {
 .router-link-exact-active {
   border-bottom: solid 1px white
 }
+
+.slide-enter-active, .slide-leaver-active {
+  transition: opacity 1s, transform 1s;
+}
+
+.slide-enter, .slide-leave-to {
+  opacity: 0;
+  transform: translateX(-30%);
+}
+
 </style>
